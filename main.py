@@ -77,7 +77,7 @@ print("Acredito que coletei todas as informações necessárias")
 
 nascimento = Data(dia_nascimento, mes_nascimento, ano_nascimento)
 gastos = Gastos(aluguel, feira, comida, transporte, outros)
-financa = Financa(patrimonio, salario, gastos_totais, investimento)
+financa = Financa(patrimonio, salario, gastos, investimento)
 antonieta = Pessoa(nome, nascimento, financa)
 
 gastos_totais2 = (
