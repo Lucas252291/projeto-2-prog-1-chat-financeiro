@@ -25,7 +25,7 @@ time.sleep(tempo)
 
 print(f"Muito bem, então conferindo seus dados, estou registrando aqui.")
 
-print(f"{cor_verde}{nome}{reset}, nascimento{cor_verde}{dia_nascimento}/{mes_nascimento}/{ano_nascimento}{reset}")
+print(f"{cor_verde}{nome}{reset}, nascimento{cor_verde} {dia_nascimento}/{mes_nascimento}/{ano_nascimento}{reset}")
 
 time.sleep(tempo)
 print ("\n---\n")
