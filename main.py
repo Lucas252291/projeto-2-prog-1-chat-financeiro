@@ -1,6 +1,9 @@
 import time
 from data import *
 from pessoa import * 
+from financa import *
+from gastos import *
+
 #Missão 1
 
 cor_amarelo = "\033[33m"
@@ -9,7 +12,7 @@ cor_verde = "\033[32m"
 reset = "\033[0m"
 tempo = 2
 
-print(f"Oi, pode me chamar de {cor_azul}Din{reset}!\nSou um assitente financeiro" )
+print(f"Oi, pode me chamar de {cor_azul}Din{reset}!\nSou um assistente financeiro" )
 print(f"e vou tentar te ajudar com as {cor_azul}contas{reset} e os {cor_azul}objetivos{reset}." )
 
 print("\n[DADOS PESSOAIS]\n")
@@ -34,7 +37,7 @@ time.sleep(tempo)
 
 print("[DADOS FINANCEIROS]\n")
 
-print("Agora me informa por favor alguns daddos finaceiros")
+print("Agora me informa por favor alguns dados finaceiros")
 patrimonio = float(input(f"Se você somar o dinheiro que tem guardado, me diz o total desse {cor_amarelo}patrimônio{reset}: R$ "))
 salario = float(input(f"Me diz teu {cor_amarelo}salário{reset}: R$ "))
 time.sleep(tempo)
@@ -73,11 +76,24 @@ print("Acredito que coletei todas as informações necessárias")
 #Missã 2
 
 nascimento = Data(dia_nascimento, mes_nascimento, ano_nascimento)
+gastos = Gastos(aluguel, feira, comida, transporte, outros)
+financa = Financa(patrimonio, salario, gastos_totais, investimento)
+antonieta = Pessoa(nome, nascimento, financa)
 
-lucas = Pessoa(nome, nascimento)
+gastos_totais2 = (
+    antonieta.financa.gastos.aluguel +
+    antonieta.financa.gastos.feira +
+    antonieta.financa.gastos.comida +
+    antonieta.financa.gastos.transporte +
+    antonieta.financa.gastos.outros
+)
 
-print(f"Ola,{lucas.nome}")
+print(f"\n---\n")
 
-
-
-
+print(f"Agora organizei todos os seus dados de forma concentrada aqui no meu sistema")
+print(f"Vou te mostrar como ficou: ")
+print(f"{antonieta.nome}, nascimento em {antonieta.nascimento.dia}/{antonieta.nascimento.mes}/{antonieta.nascimento.ano}")
+print(f"{antonieta.nome} tem {antonieta.financa.patrimonio} de patrimônio")
+print(f"{antonieta.nome} tem {antonieta.financa.salario} de salário")
+print(f"{antonieta.nome} tem {gastos_totais2} de gastos")
+print(f"{antonieta.nome} tem {antonieta.financa.investimentos} de investimentos")

@@ -1,4 +1,4 @@
-class Gasto():
+class Gastos():
     
     def __init__(self, aluguel, feira, comida, transporte, outros):
         self.aluguel = aluguel
