@@ -88,7 +88,9 @@ gastos_totais2 = (
     antonieta.financa.gastos.outros
 )
 
+time.sleep(tempo)
 print(f"\n---\n")
+time.sleep(tempo)
 
 print(f"Agora organizei todos os seus dados de forma concentrada aqui no meu sistema")
 print(f"Vou te mostrar como ficou: ")
@@ -97,9 +99,10 @@ print(f"{antonieta.nome} tem {antonieta.financa.patrimonio} de patrimônio")
 print(f"{antonieta.nome} tem {antonieta.financa.salario} de salário")
 print(f"{antonieta.nome} tem {gastos_totais2} de gastos")
 print(f"{antonieta.nome} tem {antonieta.financa.investimentos} de investimentos")
- 
-print(f"\n---\n")
 
+time.sleep(tempo)
+print(f"\n---\n")
+time.sleep(tempo)
 #Missão 3
 print("Agora sim, vamos pensar no futuro! Você tem um próximo objetivo financeiro?")
 print("Um desejo de adquirir ou realizar algo que você quer e que precisa de investimento?")
@@ -111,7 +114,7 @@ print("Em uma conta simples que fiz aqui, sem considerar rendimentos ou inflaç�
 print(f"com base na sua capacidade de investimento mensal de {cor_verde}R${investimento:.2f}{reset}")
 print(f"e o seu patrimônio atual de {cor_verde}R${patrimonio:.2f}{reset}")
 print(f"Você conseguiria atingir o valor de {cor_verde}R${valor_financeiro:.2f}{reset} em: ")
-mes = (3500-2000)/100
+mes = (valor_financeiro - patrimonio)/100
 ano = mes / 12
 print(f"{mes:.2f} meses")
 print(f"Ou {ano:.2f} anos")
